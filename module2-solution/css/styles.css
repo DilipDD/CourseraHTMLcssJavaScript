@@ -1,0 +1,108 @@
+body {
+	font-family: Arial, Verdana, sans-serif;
+}
+
+.first, .second, .third {
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+
+	margin-top: 10px;
+	background-color: #efefef;
+	box-sizing: border-box;
+}
+
+.InnerBox {
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	margin-top: -1px;
+	margin-right: -1px;
+	margin-bottom: 20px;
+	width: 33.3%;
+	text-align: center;
+	font-size: 125%;
+	float: right;
+}
+
+.first > .InnerBox {
+	background-color:green;
+	color: white;
+}
+
+.second  > .InnerBox {
+	background-color:blue;
+	color: white;
+}
+
+.third > .InnerBox {
+	background-color:yellow;
+	color: blue;
+}
+
+.OuterPara {
+	clear: both;
+	margin: 3px;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+.InnerPara {
+	margin: 3px;
+}
+
+h1 {
+	color: brown;
+	text-align: center;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	font-size: 175%;
+}
+
+@media (min-width:992px) {
+	.first, .second, .third {
+		Width: 30%;
+	}
+	.first {
+		float: left;
+		margin-left: 2.5%;
+	}
+	.second {
+		float: left;
+		margin-left:2.5%;
+	}
+	.third {
+		float: right;
+		margin-right: 2.5%;
+	}
+}
+
+@media (min-width:768px) and (max-width:991px)   {
+	.first {
+		width: 47%;
+		float: left;
+		margin-left: 2%;
+		margin-bottom: 20px;
+	}
+	.second {
+		width: 47%;
+		float: right;
+		margin-right: 2%;
+		margin-bottom: 20px;
+	}
+	.third {
+		clear: both;
+		margin-left: 2%;
+		margin-right: 2%;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width:767px) {
+	.first, .second, .third {
+		clear: both;
+		margin-left: 2%;
+		margin-right: 2%;
+		margin-top: 20px;
+	}
+}
